@@ -1,10 +1,6 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {  createSlice } from "@reduxjs/toolkit";
 import DATA from "../data/portfolio.json";
 
-
-export const getPortfolioItems = createAsyncThunk("items/getItems", async()=>{
-  return DATA
-})
 
 const initialState = {
   items:[],
@@ -36,19 +32,6 @@ export const portfolioSlice = createSlice({
     
   },
 
-  extraReducers: {
-  [getPortfolioItems.pending]: (state,action) => {
-  state.loading=true;
-  },
-  [getPortfolioItems.fulfilled]:(state,action)=> {
-  state.loading=false;
-  state.items= action.payload
-  },
-  [getPortfolioItems.rejected]:(state,action)=>{
-  state.loading=false
-  }
-
-  }
 });
 
 export const { setResetState, toggleFilter,toggleSearchFilter } = portfolioSlice.actions;

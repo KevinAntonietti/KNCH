@@ -2,7 +2,7 @@ import { React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import PortfolioButton from "../PortfolioButton/PortfolioButton";
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
-import { getPortfolioItems } from "../../features/portfolio.slice";
+import { setResetState } from "../../features/portfolio.slice";
 
 export default function Portfolio() {
   const statePortfolio = useSelector((state) => state.portfolio.items);
@@ -10,7 +10,7 @@ export default function Portfolio() {
   const dispatch = useDispatch()
 
   useEffect(()=>{
-    dispatch(getPortfolioItems())
+    dispatch(setResetState())
   },[dispatch])
 
   console.log(statePortfolio);

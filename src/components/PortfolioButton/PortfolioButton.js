@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { getPortfolioItems, setResetState, toggleFilter} from '../../features/portfolio.slice'
-// import DATA from "../../data/portfolio.json"
+import { setResetState, toggleFilter} from '../../features/portfolio.slice'
 
 export default function PortfolioButton() {
   const dispatch = useDispatch()
@@ -13,12 +12,12 @@ export default function PortfolioButton() {
 
   // Filtre des élément motion
   const toggleMotion = () => {
-    // dispatch(getPortfolioItems())
+    dispatch(setResetState())
     dispatch(toggleFilter("motion")) }
 
     // revenir au state initial
     const toggleALL = () => {
-      dispatch(getPortfolioItems())
+      dispatch(setResetState())
     }
     
     // const handleSearchBar = (e) => {
