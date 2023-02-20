@@ -1,0 +1,16 @@
+@use 'reset';
+@use 'vars' as v;
+
+.portfolio {
+display: flex;
+
+}
+
+.portfolioItem {
+width: 150px;
+margin-right: 2rem;
+
+    & img {
+    max-width: 150px;
+    }
+}
