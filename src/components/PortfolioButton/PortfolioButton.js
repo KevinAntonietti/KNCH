@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { setResetState, toggleFilter} from '../../features/portfolio.slice'
+import { setResetState, toggleFilter,toggleSearchFilter} from '../../features/portfolio.slice'
 
 export default function PortfolioButton() {
   const dispatch = useDispatch()
@@ -20,14 +20,16 @@ export default function PortfolioButton() {
       dispatch(setResetState())
     }
     
-    // const handleSearchBar = (e) => {
-    //   const value = e.target.value
-    //   console.log(value);
+    const handleSearchBar = (e) => {
+      const value = e.target.value
       
-    //   if(value===""){
-    //     dispatch(setPortfolioData(DATA))
-    //   }
-    // }
+      
+      if(value===""){
+        dispatch(setResetState())
+      }
+
+      else(dispatch(toggleSearchFilter(value)))
+    }
     
   return (
     <div>
@@ -35,7 +37,7 @@ export default function PortfolioButton() {
       <button onClick={toggleUi}>UI</button>
       <button onClick={toggleMotion}>Motion</button>
       <button onClick={toggleALL}>All</button>
-      <input type="text" placeholder="Chercher" ></input>
+      <input type="text" placeholder="Chercher" onChange={handleSearchBar} ></input>
       
     </div>
   )

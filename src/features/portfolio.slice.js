@@ -22,13 +22,13 @@ export const portfolioSlice = createSlice({
     return {...state, items:filterState}  
     },
 
-    // toggleSearchFilter:(state,action)=>{
+    toggleSearchFilter:(state,action)=>{
 
-    // const filterSearch= state.filter(item=> 
-    // item.name.toLowerCase().includes(action.payload) || item.type.toLowerCase().includes(action.payload))
+    const filterSearch= state.items.filter(item=> 
+    item.name.toLowerCase().includes(action.payload) || item.type.toLowerCase().includes(action.payload))
     
-    // return [...filterSearch] 
-    // }
+    return {...state, items:filterSearch} 
+    }
     
   },
 
