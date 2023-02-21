@@ -1,4 +1,5 @@
 import React from 'react';
+import Menu from './components/Menu/Menu';
 
 import Portfolio from './components/Portfolio/Portfolio';
 
@@ -6,7 +7,8 @@ import Portfolio from './components/Portfolio/Portfolio';
 function App() {
 
   return (
-    <div className="App">
+    <div className="App container">
+      <Menu/>
       <Portfolio />
     </div>
   );

@@ -1,7 +1,7 @@
 import { React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import PortfolioButton from "../PortfolioButton/PortfolioButton";
-import PortfolioItem from "../PortfolioItem/PortfolioItem";
+import PortfolioButton from "./PortfolioButton";
+import PortfolioItem from "./PortfolioItem";
 import { setResetState } from "../../features/portfolio.slice";
 
 export default function Portfolio() {
