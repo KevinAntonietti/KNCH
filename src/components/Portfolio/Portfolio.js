@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import PortfolioButton from "./PortfolioButton";
 import PortfolioItem from "./PortfolioItem";
 import { setResetState } from "../../features/portfolio.slice";
+import "./index.scss"
 
 export default function Portfolio() {
   const statePortfolio = useSelector((state) => state.portfolio.items);
-
+  
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -16,14 +17,13 @@ export default function Portfolio() {
   console.log(statePortfolio);
 
   return (
-    <div>
+    <div className='portfolio'>
       <PortfolioButton />
-      <div className='portfolio'>
- 
+      <div className="portfolio__binder">
       {statePortfolio.map((item) => {
         return <PortfolioItem key={item.id} {...item} />;
       })}
-      </div>
+      </div>                                                              
     </div>
   );
 }

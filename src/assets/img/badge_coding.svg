@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 35">
+  <g id="badge_type">
+    <g id="badge_coding">
+      <path d="m0,0h20v25c0,5.52-4.48,10-10,10h0C4.48,35,0,30.52,0,25V0H0Z" style="fill: #100c31;"/>
+      <g>
+        <path d="m4.4,22.28l3.06,1.08v1.5l-4.62-1.96v-1.27l4.62-1.96v1.5l-3.06,1.1Z" style="fill: #c62c7b;"/>
+        <path d="m9.23,26.27h-1.15l2.88-8.49h1.15l-2.88,8.49Z" style="fill: #c62c7b;"/>
+        <path d="m16.02,22.26l-3.12-1.09v-1.49l4.68,1.96v1.26l-4.68,1.97v-1.5l3.12-1.11Z" style="fill: #c62c7b;"/>
+      </g>
+    </g>
+  </g>
+</svg>

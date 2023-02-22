@@ -10,19 +10,6 @@ body {
   }
   
 .container {
-  padding: 4rem;
+  padding: 3rem 8rem;
 
-}
-.portfolio {
-display: flex;
-
-}
-
-.portfolioItem {
-width: 150px;
-margin-right: 2rem;
-
-    & img {
-    max-width: 150px;
-    }
 }
