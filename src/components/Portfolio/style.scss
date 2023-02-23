@@ -1,6 +1,32 @@
 @use '../../style/vars' as v; 
 
 
+
+.portfolio-button {
+    padding: 0.5rem 1rem;
+    border-radius:50px ;
+    border: solid 2px v.$color-primary;
+    background: none;
+    color: v.$color-white;
+    font-weight: 600;
+    transition: ease-out 0.2s;
+    letter-spacing: 0.05rem;
+
+    &:hover {
+        border:  solid 2px v.$color-white;
+        transition: ease-in 0.2s;
+        color: v.$color-primary;
+    }
+    
+}
+
+.portfolio-button--active {
+    border:  solid 2px v.$color-white;
+    transition: ease-in 0.2s;
+    color: v.$color-primary;
+    background: v.$color-white ;
+}
+
  .portfolio {
 
     &__binder {
@@ -21,16 +47,15 @@
     background-position: center;
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.5);
     transition: 0.4s ease-out;
+   
 
     &:hover {
-        box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.4);
-        transform: scale(1.10, 1.10);
-        transform-origin: 50% 50%;
-        transition: 0.4s ease-in;
+        transform: perspective(1000px) translateY(-5%) rotateX(15deg);
+        box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
         background-color: rgba(0,0,0, 0.4);
-        // filter: blur(5px);
-
+        animation:  0.5s ease-in ;
     }
+
     
     &__type {
         position: absolute;
@@ -55,9 +80,10 @@
         }
 
         &__item {
+            font-size: 1.2rem;
             position: absolute;
-            top: 50%; left: 50%; /* à 50%/50% du parent référent */
-            transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+            top: 50%; left: 50%; 
+            transform: translate(-50%, -50%) rotateX(-15deg) ;
         }
 
     }
@@ -74,14 +100,3 @@
             }
     }
 }
-
-
-
-
-
-
-
-
-
-
-

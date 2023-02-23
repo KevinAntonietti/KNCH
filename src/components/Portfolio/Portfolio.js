@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import PortfolioButton from "./PortfolioButton";
 import PortfolioItem from "./PortfolioItem";
 import { setResetState } from "../../features/portfolio.slice";
-import "./index.scss"
+import "./style.scss"
 
 export default function Portfolio() {
   const statePortfolio = useSelector((state) => state.portfolio.items);
