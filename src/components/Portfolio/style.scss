@@ -2,7 +2,16 @@
 
 
 
-.portfolio-button {
+
+
+.portfolio-button-menu {
+    
+    display: flex;
+    justify-content: center;
+
+}
+
+.portfolio-button-item  {
     padding: 0.5rem 1rem;
     border-radius:50px ;
     border: solid 2px v.$color-primary;
@@ -20,7 +29,7 @@
     
 }
 
-.portfolio-button--active {
+.portfolio-button-item--active {
     border:  solid 2px v.$color-white;
     transition: ease-in 0.2s;
     color: v.$color-primary;
@@ -28,7 +37,7 @@
 }
 
  .portfolio {
-
+    margin-top: 5rem;
     &__binder {
         display: flex;
         justify-content: center;

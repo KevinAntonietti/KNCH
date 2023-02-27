@@ -38,12 +38,12 @@ export default function PortfolioButton() {
 
 
   return (
-    <div>
+    <div className='portfolio-button-menu'>
  
-      <button className={UIActive ? "portfolio-button portfolio-button--active": "portfolio-button" }  onClick={toggleUi}>ui</button>
-      <button className={MotionActive ? "portfolio-button portfolio-button--active": "portfolio-button" } onClick={toggleMotion}>motion</button>
-      <button className={CodingActive ? "portfolio-button portfolio-button--active": "portfolio-button" } onClick={toggleCoding}>coding</button>
-      <button className={AllActive ? "portfolio-button portfolio-button--active": "portfolio-button" } onClick={toggleALL}>All</button>
+      <button className={AllActive ? "portfolio-button-item portfolio-button-item--active": "portfolio-button-item " } onClick={toggleALL}>All</button>
+      <button className={UIActive ? "portfolio-button-item portfolio-button-item--active": "portfolio-button-item " }  onClick={toggleUi}>ui</button>
+      <button className={MotionActive ? "portfolio-button-item portfolio-button-item--active": "portfolio-button-item " } onClick={toggleMotion}>motion</button>
+      <button className={CodingActive ? "portfolio-button-item portfolio-button-item--active": "portfolio-button-item " } onClick={toggleCoding}>coding</button>
       
     </div>
   )

@@ -1,30 +1,42 @@
-@use '../../style/vars' as v; 
-
+@use "../../style/vars" as v;
 
 .nav-container {
-display: flex;
-flex-direction: column;
-align-items: center;
+  position: fixed;
+  z-index: 20;
+  background-color: v.$color-bg;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+
 }
 .logo-img {
-    width: 5rem;
-    margin: 0.5rem;
+  width: 5rem;
+  margin: 0.5rem;
 }
 .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &__item {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    &__item {
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 1rem;
-        font-weight: 400;
-        
-        &__number {
-            font-weight: 700;
-            padding-right: 0.5rem;
-            color: v.$color-primary;
-        }
+    flex-wrap: nowrap;
+    padding: 1rem;
+    font-weight: 400;
+
+    &__number {
+      font-weight: 700;
+      padding-right: 0.5rem;
+      color: v.$color-primary;
     }
+  }
 }
