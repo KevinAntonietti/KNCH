@@ -1,5 +1,10 @@
 @use '../../style/vars' as v; 
 .svg-box {
-    width: 1050px;
+    width: 950px;
     margin: 5rem auto;
+}
+
+#Nuage_Gauche {
+    transition:0;
+
 }

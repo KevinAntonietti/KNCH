@@ -3,17 +3,41 @@ import "./style.scss"
 
 export default function HeaderAnimation() {
 
-    const [color, setColor] = useState(true)
 
-    const changeColor = () => {
-      setColor(!color)
-      console.log(color);
-    } 
     
+    const CloudMove = (e)=> {
+      // Cloud Left logic move
+      const xCloudLeft = e.clientX*7 / e.screenX + "%";
+      const CloudLeft = document.getElementById("Nuage_Gauche")
+        CloudLeft.style.transition = "0.5s";
+        CloudLeft.style.transform =`translateX(${xCloudLeft})`;
+      
+      // Cloud Right Logic Move
+      const xCloudRight =  ( e.clientX*10 / e.screenX*-1) + "%";
+      const CloudRight = document.getElementById("Nuage_Droite")
+      CloudRight.style.transition = "0.5s";
+      CloudRight.style.transform =`translateX(${xCloudRight})`;
+    }
+
+    const CloudMoveOut = (e) => {
+      // Cloud Left reset logic move
+      const CloudLeft = document.getElementById("Nuage_Gauche")
+      CloudLeft.style.transition = "0.7s";
+      CloudLeft.style.transform =`translateX(0%)` ;
+      CloudLeft.style.transform =`translateY(0%)` ;
+
+       // Cloud Rightreset logic move
+       const CloudRight = document.getElementById("Nuage_Droite")
+       CloudRight.style.transition = "0.7s";
+       CloudRight.style.transform =`translateX(0%)` ;
+       CloudRight.style.transform =`translateY(0%)` ;
+    }
+
+
   return (
-    <div className='svg-box'>
+    <div className='svg-box' onMouseMove={CloudMove} onMouseOut={CloudMoveOut}>
      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -190 1300 530">
-  <g id="Soleil" onClick={changeColor}  style={color ? {fill:"#e5b845"} : {fill:"#C62C7B"}}> 
+  <g id="Soleil" style= {{fill:"#e5b845"}}> 
     <path id="Soleil-2" data-name="Soleil" d="m672.25,136.04h-.75v-7.77h-7.51v-15.04h-7.53v-15.06h-7.53v-15.06h-7.53v-15.04h-7.53v-7.53h-7.51v-15.06h-7.53v-7.53h-15.06v-7.51h-7.53v-7.53h-15.04v-7.53h-15.06v-7.53h-15.06V.28h-67.75v7.53h-22.58v7.53h-15.06v7.53h-15.04v7.53h-7.53v7.51h-7.53v7.53h-7.53v7.53h-7.53v15.06h-7.53v15.04h-7.51v15.06h-7.53v15.06h-7.53v15.04h-7.53v15.06h.4v25.71h.1v14.81h7.51v15.04h7.53v15.06h7.53v15.06h7.53v15.04h7.53v7.53h7.51v15.06h7.53v7.53h15.06v7.51h7.53v7.53h15.04v7.53h15.06v7.53h15.06v7.53h67.75v-7.53h22.58v-7.53h15.06v-7.53h15.04v-7.53h7.53v-7.51h7.53v-7.53h7.53v-7.53h7.53v-15.06h7.53v-15.04h7.51v-15.06h7.53v-15.06h7.53v-15.04h7.53v-14.81h.25v-33Zm-256.22,123.09v-.76c.22.25.44.51.66.76h-.66Zm7.53,7.53v-.42c.14.14.29.28.44.42h-.44Zm97.88,37.64h-7.53v-.1c1.25.03,2.5.09,3.76.09s2.52-.06,3.77-.1v.1Zm97.38-251.31v.76c-.22-.25-.44-.51-.66-.76h.66Zm-7.53-7.53v.42c-.14-.14-.29-.28-.44-.42h.44Zm-97.88-37.64h7.53v.1c-1.25-.03-2.5-.09-3.76-.09s-2.52.06-3.77.1v-.1Z" />
   </g>
   <g id="Montagne_Droite">
@@ -50,7 +74,7 @@ export default function HeaderAnimation() {
       <rect x="395.25" y="293.04" width="131" height="6" style={{fill: "#c62c7b"}}/>
     </g>
   </g>
-  <g id="Nuage_Gauche">
+  <g id="Nuage_Gauche"  style={{position:"relative"}}>
     <polygon points="351.29 80.18 351.29 91.69 339.78 91.69 339.78 103.19 339.78 114.66 351.29 114.66 351.29 103.19 362.79 103.19 362.79 91.69 362.79 80.18 351.29 80.18" style={{fill: "#c62c7b"}}/>
     <polygon points="270.8 68.68 259.32 68.68 259.32 80.18 247.82 80.18 247.82 91.69 236.32 91.69 236.32 103.19 247.82 103.19 259.32 103.19 259.32 91.69 270.8 91.69 270.8 80.18 282.3 80.18 282.3 68.68 282.3 57.18 270.8 57.18 270.8 68.68" style={{fill: "#c62c7b"}}/>
     <polygon points="443.28 103.19 443.28 91.69 443.28 80.18 431.77 80.18 431.77 68.68 420.27 68.68 420.27 57.18 408.77 57.18 397.27 57.18 397.27 68.68 385.79 68.68 385.79 80.18 374.29 80.18 374.29 91.69 362.79 91.69 362.79 103.19 351.29 103.19 351.29 114.66 339.78 114.66 339.78 103.19 339.78 91.69 351.29 91.69 351.29 80.18 351.29 68.68 339.78 68.68 339.78 57.18 328.31 57.18 316.81 57.18 305.31 57.18 305.31 68.68 293.8 68.68 282.3 68.68 282.3 80.18 270.8 80.18 270.8 91.69 259.32 91.69 259.32 103.19 247.82 103.19 236.32 103.19 236.32 91.69 247.82 91.69 247.82 80.18 259.32 80.18 259.32 68.68 270.8 68.68 270.8 57.18 270.8 45.7 259.32 45.7 259.32 34.2 247.82 34.2 236.32 34.2 224.82 34.2 213.31 34.2 201.84 34.2 201.84 45.7 190.34 45.7 190.34 57.18 178.84 57.18 178.84 68.68 167.33 68.68 167.33 80.18 167.33 91.69 155.83 91.69 155.83 103.19 144.36 103.19 144.36 114.66 132.86 114.66 132.86 126.16 144.36 126.16 155.83 126.16 167.33 126.16 178.84 126.16 178.84 114.66 190.34 114.66 201.84 114.66 213.31 114.66 224.82 114.66 236.32 114.66 236.32 126.16 247.82 126.16 259.32 126.16 270.8 126.16 282.3 126.16 293.8 126.16 293.8 114.66 305.31 114.66 316.81 114.66 328.31 114.66 328.31 126.16 339.78 126.16 351.29 126.16 362.79 126.16 374.29 126.16 385.79 126.16 397.27 126.16 408.77 126.16 408.77 114.66 420.27 114.66 431.77 114.66 443.28 114.66 454.75 114.66 454.75 103.19 443.28 103.19" style={{fill: "#d06ca0"}}/>
