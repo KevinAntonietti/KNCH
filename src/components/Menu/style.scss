@@ -7,6 +7,11 @@
   top: 0;
   width: 100%;
   left: 0;
+  @media screen and (max-width: 650px) {
+    // flex-direction: row;
+    // justify-content: space-between;
+    // margin: 3rem;
+  }
 }
 
 .nav {
@@ -14,9 +19,19 @@
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 650px) {
+    // flex-direction: row;
+    // justify-content: space-between;
+    // margin: 3rem;
+  }
+
 }
+
+
 .logo-img {
-  width: 5rem;
+  width: 6rem;
   margin: 0.5rem;
 }
 .menu {
@@ -54,6 +69,10 @@
       color: v.$color-primary;
     }
   }
+  &--active {
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+  }
 }
 
 .show-menu {
@@ -85,8 +104,8 @@
     &__burger-bar::before,
     &__burger-bar::after {
       display: block;
-      width: 40px;
-      height: 3px;
+      width: 30px;
+      height: 2px;
       position: relative;
       border-radius: 3px;
       background-color: v.$color-white;
@@ -100,27 +119,27 @@
 
     &__burger-bar::before {
       transform: translateY(-12px);
-      transition: 0.3s ease-out ;
-     
+      transition: 0.3s ease-out;
     }
     &__burger-bar::after {
       transform: translateY(12px);
-      transition: 0.3s ease-out ;
+      transition: 0.3s ease-out;
     }
   }
 
-  .show-menu  .navbar-burger__burger-bar {
+  .show-menu .navbar-burger__burger-bar {
     background: transparent;
   }
-  .show-menu  .navbar-burger__burger-bar::before  {
+  .show-menu .navbar-burger__burger-bar::before {
     transition: 0.3s ease-in;
-    transform:translate(-50%, -50%) rotate(45deg) translateY(-1em)translateX(1rem);
+    transform: translate(-50%, -50%) rotate(45deg) translateY(-1em)
+      translateX(1rem);
     transform-origin: center;
     width: 5rem;
   }
-  .show-menu  .navbar-burger__burger-bar::after   {
-    transition: 0.3s ease-in ;
-    transform: rotate(-45deg)translateY(-1rem) translateX(-1rem);
+  .show-menu .navbar-burger__burger-bar::after {
+    transition: 0.3s ease-in;
+    transform: rotate(-45deg) translateY(-1rem) translateX(-1rem);
     transform-origin: center;
     width: 5rem;
   }
