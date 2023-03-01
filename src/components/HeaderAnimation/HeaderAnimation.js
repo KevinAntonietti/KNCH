@@ -1,16 +1,16 @@
 import React from "react";
-import "./style.scss"; 
+import "./style.scss";
 
 export default function HeaderAnimation() {
   const elemMoveOn = (e) => {
     // Cloud Left logic move
-    const xCloudLeft = ((e.clientX * 20) / window.innerWidth)*-1 + "%";
+    const xCloudLeft = ((e.clientX * 20) / window.innerWidth) * -1 + "%";
     const CloudLeft = document.getElementById("Nuage_Gauche");
     CloudLeft.style.transition = "0.5s";
     CloudLeft.style.transform = `translateX(${xCloudLeft})`;
 
     // Cloud Right Logic Move
-    const xCloudRight = ((e.clientX * 40) / window.innerWidth)  + "%";
+    const xCloudRight = (e.clientX * 40) / window.innerWidth + "%";
     const CloudRight = document.getElementById("Nuage_Droite");
     console.log(xCloudRight);
     CloudRight.style.transition = "0.5s";
@@ -21,22 +21,22 @@ export default function HeaderAnimation() {
     const Sun = document.getElementById("Soleil");
     Sun.style.transition = "0.5s";
     Sun.style.transform = `translateY(${ySun})`;
-    Sun.style.filter = " brightness(1.2)"
+    Sun.style.filter = " brightness(1.2)";
 
     //Mountain Right logic Aniamtion
-    const MountainRight = document.getElementById("Montagne_Droite")
-    MountainRight.style.transition ="1s"
-    MountainRight.style.filter="brightness(1.3) "
-   
-     //Mountain Center logic Aniamtion
-    const MountainCenter = document.getElementById("Montagne_Centre")
-    MountainCenter.style.transition ="1s"
-    MountainCenter.style.filter="brightness(1.3)"
+    const MountainRight = document.getElementById("Montagne_Droite");
+    MountainRight.style.transition = "1s";
+    MountainRight.style.filter = "brightness(1.3) ";
 
-     //Mountain Left logic Aniamtion
-    const MountainLeft = document.getElementById("Montagne_Gauche")
-    MountainLeft.style.transition ="1s"
-    MountainLeft.style.filter="brightness(1.3) "
+    //Mountain Center logic Aniamtion
+    const MountainCenter = document.getElementById("Montagne_Centre");
+    MountainCenter.style.transition = "1s";
+    MountainCenter.style.filter = "brightness(1.3)";
+
+    //Mountain Left logic Aniamtion
+    const MountainLeft = document.getElementById("Montagne_Gauche");
+    MountainLeft.style.transition = "1s";
+    MountainLeft.style.filter = "brightness(1.3) ";
   };
 
   const elemMoveOut = (e) => {
@@ -54,32 +54,36 @@ export default function HeaderAnimation() {
     const Sun = document.getElementById("Soleil");
     Sun.style.transition = "0.7s";
     Sun.style.transform = `translateY(0%)`;
-    Sun.style.filter = "brightness(1)"
+    Sun.style.filter = "brightness(1)";
 
     //MountainRight reset logic animation
-    const MountainRight = document.getElementById("Montagne_Droite")
-    MountainRight.style.transition ="0.7s"
-    MountainRight.style.filter="brightness(1) "
+    const MountainRight = document.getElementById("Montagne_Droite");
+    MountainRight.style.transition = "0.7s";
+    MountainRight.style.filter = "brightness(1) ";
 
     //MountainCenter reset logic animation
-      const MountainCenter = document.getElementById("Montagne_Centre")
-      MountainCenter.style.transition ="0.7s"
-      MountainCenter.style.filter="brightness(1) "
+    const MountainCenter = document.getElementById("Montagne_Centre");
+    MountainCenter.style.transition = "0.7s";
+    MountainCenter.style.filter = "brightness(1) ";
 
-   //MountainLeftreset logic animation
-      const MountainLeft = document.getElementById("Montagne_Gauche")
-      MountainLeft.style.transition ="1s"
-      MountainLeft.style.filter="brightness(1) "
+    //MountainLeftreset logic animation
+    const MountainLeft = document.getElementById("Montagne_Gauche");
+    MountainLeft.style.transition = "1s";
+    MountainLeft.style.filter = "brightness(1) ";
   };
 
   return (
-
-
-    <div className="svg-box" onMouseMove={elemMoveOn} onMouseOut={elemMoveOut}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 -150 1026 530"
-      >
+    <div className="anim-box" onMouseMove={elemMoveOn} onMouseOut={elemMoveOut}>
+    <div className="letter-anim">
+      <div className="letter-anim__KNCH">
+        <p className="letter-anim__KNCH__letter">K</p>
+        <p className="letter-anim__KNCH__letter">N</p>
+        <p className="letter-anim__KNCH__letter">C</p>
+        <p className="letter-anim__KNCH__letter">H</p>
+      </div>
+    <div className="letter-anim__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam illo tempore nesciunt atque. Adipisci a laborum rem esse maiores magnam assumenda sit? Cum omnis eius quibusdam? Animi tempore in possimus quia provident similique totam perspiciatis sit harum beatae. Hic eius, repudiandae numquam assumenda impedit animi, saepe sunt aperiam ullam necessitatibus, nostrum reiciendis atque exercitationem quo earum cumque a expedita. Dicta!</div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -150 1026 530">
         <g id="Soleil" style={{ fill: "#e5b845" }}>
           <path
             id="Soleil-2"
