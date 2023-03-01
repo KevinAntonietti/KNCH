@@ -4,13 +4,15 @@ import { Element} from 'react-scroll'
 
 import Portfolio from './components/Portfolio/Portfolio';
 import HeaderAnimation from './components/HeaderAnimation/HeaderAnimation';
+import HeaderText from './components/HeaderText/HeaderText';
 
 
 function App() {
 
   return (
     <div className="App container">
-      <Menu/>
+      {/* <Menu/> */}
+      <HeaderText/>
       <HeaderAnimation />
       <Element name="Portfolio" >
       <Portfolio />

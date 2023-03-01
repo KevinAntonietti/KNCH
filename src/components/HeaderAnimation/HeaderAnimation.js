@@ -4,14 +4,15 @@ import "./style.scss";
 export default function HeaderAnimation() {
   const elemMoveOn = (e) => {
     // Cloud Left logic move
-    const xCloudLeft = (e.clientX * 7) / e.screenX + "%";
+    const xCloudLeft = ((e.clientX * 20) / window.innerWidth)*-1 + "%";
     const CloudLeft = document.getElementById("Nuage_Gauche");
     CloudLeft.style.transition = "0.5s";
     CloudLeft.style.transform = `translateX(${xCloudLeft})`;
 
     // Cloud Right Logic Move
-    const xCloudRight = ((e.clientX * 10) / e.screenX) * -1 + "%";
+    const xCloudRight = ((e.clientX * 40) / window.innerWidth)  + "%";
     const CloudRight = document.getElementById("Nuage_Droite");
+    console.log(xCloudRight);
     CloudRight.style.transition = "0.5s";
     CloudRight.style.transform = `translateX(${xCloudRight})`;
 
@@ -25,7 +26,7 @@ export default function HeaderAnimation() {
     //Mountain Right logic Aniamtion
     const MountainRight = document.getElementById("Montagne_Droite")
     MountainRight.style.transition ="1s"
-    MountainRight.style.filter="brightness(1.3) drop-shadow(-5px -3px 5px #e5b845)"
+    MountainRight.style.filter="brightness(1.3) "
    
      //Mountain Center logic Aniamtion
     const MountainCenter = document.getElementById("Montagne_Centre")
@@ -35,7 +36,7 @@ export default function HeaderAnimation() {
      //Mountain Left logic Aniamtion
     const MountainLeft = document.getElementById("Montagne_Gauche")
     MountainLeft.style.transition ="1s"
-    MountainLeft.style.filter="brightness(1.3) drop-shadow( 5px -3px 5px #e5b845)"
+    MountainLeft.style.filter="brightness(1.3) "
   };
 
   const elemMoveOut = (e) => {
@@ -58,7 +59,7 @@ export default function HeaderAnimation() {
     //MountainRight reset logic animation
     const MountainRight = document.getElementById("Montagne_Droite")
     MountainRight.style.transition ="0.7s"
-    MountainRight.style.filter="brightness(1) drop-shadow(0px 0px 0px #0a1a4c)"
+    MountainRight.style.filter="brightness(1) "
 
     //MountainCenter reset logic animation
       const MountainCenter = document.getElementById("Montagne_Centre")
@@ -68,10 +69,12 @@ export default function HeaderAnimation() {
    //MountainLeftreset logic animation
       const MountainLeft = document.getElementById("Montagne_Gauche")
       MountainLeft.style.transition ="1s"
-      MountainLeft.style.filter="brightness(1) drop-shadow(0px 0px 0px #0a1a4c)"
+      MountainLeft.style.filter="brightness(1) "
   };
 
   return (
+
+
     <div className="svg-box" onMouseMove={elemMoveOn} onMouseOut={elemMoveOut}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
