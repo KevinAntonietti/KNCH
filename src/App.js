@@ -1,7 +1,8 @@
 import React from "react";
-import Menu from "./components/Menu/Menu";
 import { Element } from "react-scroll";
 
+import Skills from "./components/Skills/Skills";
+import Menu from "./components/Menu/Menu";
 import Portfolio from "./components/Portfolio/Portfolio";
 import HeaderAnimation from "./components/HeaderAnimation/HeaderAnimation";
 
@@ -14,6 +15,9 @@ function App() {
       <HeaderAnimation />
       <Element name="Portfolio">
         <Portfolio />
+      </Element>
+      <Element name="Skills">
+        <Skills/>
       </Element>
     </div>
   );

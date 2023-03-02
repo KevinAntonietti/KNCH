@@ -12,7 +12,6 @@ export default function HeaderAnimation() {
     // Cloud Right Logic Move
     const xCloudRight = (e.clientX * 40) / window.innerWidth + "%";
     const CloudRight = document.getElementById("Nuage_Droite");
-    console.log(xCloudRight);
     CloudRight.style.transition = "0.5s";
     CloudRight.style.transform = `translateX(${xCloudRight})`;
 

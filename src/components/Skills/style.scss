@@ -1,1 +1,57 @@
 @use "../../style/vars" as v;
+
+.title-skill {
+font-size: 10rem;
+font-weight: 800;
+    &__motion {
+        // visibility: hidden;
+        text-align: left;
+        margin-left: 3rem;
+    }
+    &__coding {
+        text-align: right;
+        margin-right: 3rem;
+    }
+
+    &__uiDesign {
+        text-align: left;
+        margin-left: 3rem;
+    }
+}
+
+.animateSkillsLeft {
+    visibility:visible;
+    animation: left-apparition 1s ease-in ;
+
+}
+
+@keyframes left-apparition {
+0% {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateX(0px) ;
+}
+}
+
+
+.animateSkillsRight {
+    visibility:visible;
+    animation: right-apparition 1s ease-in ;
+
+}
+
+@keyframes right-apparition {
+0% {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateX(0px) ;
+}
+}

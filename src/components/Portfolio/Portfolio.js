@@ -14,7 +14,6 @@ export default function Portfolio() {
     dispatch(setResetState())
   },[dispatch])
 
-  console.log(statePortfolio);
 
   return (
     <div className='portfolio'>

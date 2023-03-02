@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.scss";
 import LOGO from "../../assets/img/logoKNCH.svg";
 import { Link } from "react-scroll";
@@ -72,6 +72,7 @@ export default function Menu() {
   // State Burger Menu
   const isOpenMenu = useSelector((state) => state.menu.isOpen);
 
+  // Toggle On/OFF Burger Menu
   const handleOpenMenu = () => {
     dispatch(toggleOpenMenu());
   };
@@ -81,12 +82,13 @@ export default function Menu() {
       <header className="nav-container">
         <nav className={isOpenMenu ? "nav show-menu" : "nav"}>
           <Link
-            activeClass="active"
+            activeClass="activ"
             to="Menu"
             spy={true}
             smooth={true}
             duration={500}
             offset={-60}
+            onSetActive={handleHomeSelect}
           >
             <img
               onClick={handleHomeSelect}
@@ -97,7 +99,7 @@ export default function Menu() {
           </Link>
           <ul className={isOpenMenu ? "show-menu menu" : "menu"}>
             <Link
-              activeClass="active"
+              activeClass="activ"
               to="Menu"
               spy={true}
               smooth={true}
@@ -115,7 +117,8 @@ export default function Menu() {
               </li>
             </Link>
             <Link
-              activeClass="active"
+            
+              activeClass="activ"
               to="Portfolio"
               spy={true}
               smooth={true}
