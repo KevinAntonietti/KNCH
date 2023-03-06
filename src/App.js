@@ -1,10 +1,10 @@
 import React from "react";
 import { Element } from "react-scroll";
 
-
 import Menu from "./components/Menu/Menu";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,8 +16,9 @@ function App() {
         <Portfolio />
       </Element>
       <Element name="Contact">
-      <Contact />
+        <Contact />
       </Element>
+      <Footer />
     </div>
   );
 }

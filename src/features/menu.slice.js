@@ -4,7 +4,6 @@ const initialState = {
   isOpen: false,
   homeSelect: true,
   portfolioSelect: false,
-  skillsSelect: false,
   constactSelect: false,
 };
 
@@ -40,15 +39,6 @@ export const menuSlice = createSlice({
       };
     },
 
-    toggleSkillsSelect: (state, action) => {
-      return {
-        ...state,
-        homeSelect: false,
-        portfolioSelect: false,
-        skillsSelect: true,
-        constactSelect: false,
-      };
-    },
 
     toggleConstactSelect: (state, action) => {
       return {
@@ -66,7 +56,6 @@ export const {
   toggleOpenMenu,
   toggleHomeSelect,
   togglePortfolioSelect,
-  toggleSkillsSelect,
   toggleConstactSelect,
 } = menuSlice.actions;
 export default menuSlice.reducer;

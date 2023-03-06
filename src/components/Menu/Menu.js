@@ -7,7 +7,6 @@ import {
   toggleOpenMenu,
   toggleHomeSelect,
   togglePortfolioSelect,
-  toggleSkillsSelect,
   toggleConstactSelect,
 } from "../../features/menu.slice";
 
@@ -42,18 +41,6 @@ export default function Menu() {
     return item.menu.portfolioSelect;
   });
 
-  // Skills toggle and state
-  const handleSkillSelect = () => {
-    if (window.innerWidth <= 650) {
-      dispatch(toggleOpenMenu());
-      dispatch(toggleSkillsSelect());
-    } else {
-      dispatch(toggleSkillsSelect());
-    }
-  };
-  const skillsSelect = useSelector((item) => {
-    return item.menu.skillsSelect;
-  });
 
   // Contact  toggle and state
   const handleContactSelect = () => {
@@ -135,22 +122,14 @@ export default function Menu() {
                 <p> {portfolioSelect ? "<portfolio />" : "<portfolio>"} </p>
               </li>
             </Link>
-            <li
-              className={
-                skillsSelect ? "menu__item menu--active" : "menu__item"
-              }
-              onClick={handleSkillSelect}
-            >
-              <p className="menu__item__number">03.</p>{" "}
-              <p> {skillsSelect ? "<skills />" : "<skills>"} </p>
-            </li>
+
             <li
               className={
                 contactSelect ? "menu__item menu--active" : "menu__item"
               }
               onClick={handleContactSelect}
             >
-              <p className="menu__item__number">04.</p>{" "}
+              <p className="menu__item__number">03.</p>{" "}
               <p> {contactSelect ? "<contact />" : "<contact>"} </p>
             </li>
           </ul>

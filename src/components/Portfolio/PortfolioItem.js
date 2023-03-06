@@ -4,14 +4,24 @@ import BadgeUi from "../../assets/img/badge_ui.svg";
 import BadgeCoding from "../../assets/img/badge_coding.svg";
 import BadgeMotion from "../../assets/img/badge_motion.svg";
 import BadgeAuthor from "../../assets/img/Badge_author.svg";
+import { useInView } from 'react-intersection-observer';
 
 export default function PortfolioItem(props) {
+
+  // Background image generation
   const backgroundStyle = {
     backgroundImage: `url(${require(`../../assets/img/${props.thumbs}`)})`,
   };
 
+  // react-intersection-observer Configuration
+  const { ref : cardOpening, inView : setcardOpening } = useInView({
+    threshold: 0,
+    triggerOnce:true
+
+  });
+
   return (
-    <a href={props.link}>
+    <a href={props.link} ref={cardOpening} className={setcardOpening ? "card-opening ": "" }>
       <section className="portfolioItem" style={backgroundStyle}>
         <div className="portfolioItem__type">
           {props.type.UI && (
@@ -39,12 +49,10 @@ export default function PortfolioItem(props) {
             />
           )}
         </div>
-
-        {/* {isHover &&  */}
+    
         <div className="portfolioItem__name">
           <p className="portfolioItem__name__item">{props.name}</p>
         </div>
-        {/* } */}
 
         <div className="portfolioItem__author">
           <img
