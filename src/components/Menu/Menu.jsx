@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import './style.scss';
 import { Link } from 'react-scroll';
@@ -96,16 +98,13 @@ export default function Menu() {
               onClick={handleHomeSelect}
             >
               <p className="menu__item__number">01.</p>
-              {' '}
               <p>
-                {' '}
                 {homeSelect ? '<home />' : '<home>'}
-                {' '}
               </p>
             </li>
           </Link>
 
-          {/* Home Item menu - React Scroll elem */}
+          {/* Portfolio Item menu - React Scroll elem */}
           <Link
             activeClass="activ"
             to="Portfolio"
@@ -123,29 +122,33 @@ export default function Menu() {
             >
               <p className="menu__item__number">02.</p>
               <p>
-                {' '}
                 {portfolioSelect ? '<portfolio />' : '<portfolio>'}
-                {' '}
               </p>
             </li>
           </Link>
 
-          <li
-            className={
+          {/* Portfolio Item menu - React Scroll elem */}
+          <Link
+            activeClass="activ"
+            to="Contact"
+            spy
+            smooth
+            duration={500}
+          >
+            <li
+              className={
                 contactSelect ? 'menu__item menu--active' : 'menu__item'
               }
-            onClick={handleContactSelect}
-          >
-            <p className="menu__item__number">03.</p>
-            {' '}
-            <p>
-              {' '}
-              {contactSelect ? '<contact />' : '<contact>'}
-              {' '}
-            </p>
-          </li>
+              onClick={handleContactSelect}
+            >
+              <p className="menu__item__number">03.</p>
+              <p>
+                {contactSelect ? '<contact />' : '<contact>'}
+              </p>
+            </li>
+          </Link>
         </ul>
-        <button className="navbar-burger" onClick={handleOpenMenu}>
+        <button type="button" className="navbar-burger" onClick={handleOpenMenu}>
           <span className="navbar-burger__burger-bar" />
         </button>
       </nav>
