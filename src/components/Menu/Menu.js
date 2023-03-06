@@ -13,8 +13,6 @@ import {
 export default function Menu() {
   const dispatch = useDispatch();
 
-  // Toggle Items
-
   // Home toggle and state
   const handleHomeSelect = () => {
     if (window.innerWidth <= 650) {
@@ -41,7 +39,6 @@ export default function Menu() {
     return item.menu.portfolioSelect;
   });
 
-
   // Contact  toggle and state
   const handleContactSelect = () => {
     if (window.innerWidth <= 650) {
@@ -67,7 +64,9 @@ export default function Menu() {
   return (
     <>
       <header className="nav-container">
+        {/* Logo Item menu */}
         <nav className={isOpenMenu ? "nav show-menu" : "nav"}>
+          {/* logo Item menu - React Scroll elem */}
           <Link
             activeClass="activ"
             to="Menu"
@@ -77,6 +76,7 @@ export default function Menu() {
             offset={-60}
             onSetActive={handleHomeSelect}
           >
+            {/* logo elem */}
             <img
               onClick={handleHomeSelect}
               className="logo-img"
@@ -84,7 +84,9 @@ export default function Menu() {
               alt=""
             />
           </Link>
+
           <ul className={isOpenMenu ? "show-menu menu" : "menu"}>
+            {/* Home Item menu - React Scroll elem */}
             <Link
               activeClass="activ"
               to="Menu"
@@ -93,6 +95,7 @@ export default function Menu() {
               duration={500}
               offset={-60}
             >
+              {/* Home elem */}
               <li
                 className={
                   homeSelect ? "menu__item menu--active" : "menu__item"
@@ -103,8 +106,9 @@ export default function Menu() {
                 <p> {homeSelect ? "<home />" : "<home>"} </p>
               </li>
             </Link>
+
+            {/* Home Item menu - React Scroll elem */}
             <Link
-            
               activeClass="activ"
               to="Portfolio"
               spy={true}
@@ -112,6 +116,7 @@ export default function Menu() {
               duration={500}
               offset={-160}
             >
+              {/* Portfolio Elem elem */}
               <li
                 className={
                   portfolioSelect ? "menu__item menu--active" : "menu__item"

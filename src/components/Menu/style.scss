@@ -7,19 +7,14 @@
   top: 0;
   width: 100%;
   left: 0;
-  @media screen and (max-width: 650px) {
-    // flex-direction: row;
-    // justify-content: space-between;
-    // margin: 3rem;
-  }
 }
 
 .nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 
 }
 

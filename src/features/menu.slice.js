@@ -24,7 +24,6 @@ export const menuSlice = createSlice({
         ...state,
         homeSelect: true,
         portfolioSelect: false,
-        skillsSelect: false,
         constactSelect: false,
       };
     },
@@ -34,7 +33,6 @@ export const menuSlice = createSlice({
         ...state,
         homeSelect: false,
         portfolioSelect: true,
-        skillsSelect: false,
         constactSelect: false,
       };
     },
@@ -45,7 +43,6 @@ export const menuSlice = createSlice({
         ...state,
         homeSelect: false,
         portfolioSelect: false,
-        skillsSelect: false,
         constactSelect: true,
       };
     },

@@ -5,6 +5,7 @@ import Menu from "./components/Menu/Menu";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Element name="Menu">
         <Menu />
       </Element>
+      <Header/>
       <Element name="Portfolio">
         <Portfolio />
       </Element>
