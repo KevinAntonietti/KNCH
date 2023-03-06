@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import DATA from "../data/portfolio.json";
+import { createSlice } from '@reduxjs/toolkit';
+import DATA from '../data/portfolio.json';
 
 const initialState = {
   items: [],
@@ -10,27 +10,25 @@ const initialState = {
 };
 
 export const portfolioSlice = createSlice({
-  name: "portfolio",
+  name: 'portfolio',
   initialState,
 
   reducers: {
     // Rechargement du state à sa valeur initial
-    setResetState: (state, action) => {
+    setResetState: (state) => {
       state.items = DATA;
     },
 
-    toggleFilterAll: (state, action) => {
-      return {
-        ...state,
-        isUIActive: false,
-        isMotionActive: false,
-        isCodingActive: false,
-        isAllActive: true,
-      };
-    },
+    toggleFilterAll: (state) => ({
+      ...state,
+      isUIActive: false,
+      isMotionActive: false,
+      isCodingActive: false,
+      isAllActive: true,
+    }),
 
     // Filtre des éléments du portfolio ayant le tag UI
-    toggleFilterUI: (state, action) => {
+    toggleFilterUI: (state) => {
       const filterState = state.items.filter((item) => item.type.UI === true);
       return {
         ...state,
@@ -43,9 +41,9 @@ export const portfolioSlice = createSlice({
     },
 
     // Filtre des éléments du portfolio ayant le tag motion
-    toggleFilterMotion: (state, action) => {
+    toggleFilterMotion: (state) => {
       const filterState = state.items.filter(
-        (item) => item.type.motion === true
+        (item) => item.type.motion === true,
       );
       return {
         ...state,
@@ -58,9 +56,9 @@ export const portfolioSlice = createSlice({
     },
 
     // Filtre des éléments du portfolio ayant le tag coding
-    toggleFilterCoding: (state, action) => {
+    toggleFilterCoding: (state) => {
       const filterState = state.items.filter(
-        (item) => item.type.coding === true
+        (item) => item.type.coding === true,
       );
       return {
         ...state,

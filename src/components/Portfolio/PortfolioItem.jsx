@@ -1,33 +1,36 @@
-import React from "react";
-import "./style.scss";
-import BadgeUi from "../../assets/img/badge_ui.svg";
-import BadgeCoding from "../../assets/img/badge_coding.svg";
-import BadgeMotion from "../../assets/img/badge_motion.svg";
-import BadgeAuthor from "../../assets/img/Badge_author.svg";
+/* eslint-disable react/prop-types */
+import React from 'react';
+import './style.scss';
 import { useInView } from 'react-intersection-observer';
+import BadgeUi from '../../assets/img/badge_ui.svg';
+import BadgeCoding from '../../assets/img/badge_coding.svg';
+import BadgeMotion from '../../assets/img/badge_motion.svg';
+import BadgeAuthor from '../../assets/img/Badge_author.svg';
 
 export default function PortfolioItem(props) {
-
   // Background image generation
   const backgroundStyle = {
     backgroundImage: `url(${require(`../../assets/img/${props.thumbs}`)})`,
   };
 
   // react-intersection-observer Configuration
-  const { ref : cardOpening, inView : setcardOpening } = useInView({
+  const { ref: cardOpening, inView: setcardOpening } = useInView({
     threshold: 0,
-    triggerOnce:true
-
+    triggerOnce: true,
   });
 
   return (
-    <a href={props.link} ref={cardOpening} className={setcardOpening ? "card-opening ": "" }>
+    <a
+      href={props.link}
+      ref={cardOpening}
+      className={setcardOpening ? 'card--opening ' : ''}
+    >
       <section className="portfolioItem" style={backgroundStyle}>
         <div className="portfolioItem__type">
           {props.type.UI && (
             <img
               className="portfolioItem__type__item"
-              width={"20px"}
+              width="20px"
               src={BadgeUi}
               alt="img"
             />
@@ -35,7 +38,7 @@ export default function PortfolioItem(props) {
           {props.type.coding && (
             <img
               className="portfolioItem__type__item"
-              width={"20px"}
+              width="20px"
               src={BadgeCoding}
               alt="img"
             />
@@ -43,13 +46,13 @@ export default function PortfolioItem(props) {
           {props.type.motion && (
             <img
               className="portfolioItem__type__item"
-              width={"20px"}
+              width="20px"
               src={BadgeMotion}
               alt="img"
             />
           )}
         </div>
-    
+
         <div className="portfolioItem__name">
           <p className="portfolioItem__name__item">{props.name}</p>
         </div>

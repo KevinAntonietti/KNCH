@@ -154,8 +154,12 @@
 
 
 // SCSS react-intersection-observer
-.card-opening {
+.card--opening {
 animation: cardAppearance 0.5s ease-in;
+}
+
+.portfolioHeader--opening {
+    animation: cardAppearance 0.5s ease-in;
 }
 
 @keyframes cardAppearance {

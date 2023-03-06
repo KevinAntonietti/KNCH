@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isOpen: false,
@@ -8,44 +8,35 @@ const initialState = {
 };
 
 export const menuSlice = createSlice({
-  name: "menu",
+  name: 'menu',
   initialState,
 
   reducers: {
-    toggleOpenMenu: (state, action) => {
-      return {
-        ...state,
-        isOpen: !state.isOpen,
-      };
-    },
+    toggleOpenMenu: (state) => ({
+      ...state,
+      isOpen: !state.isOpen,
+    }),
 
-    toggleHomeSelect: (state, action) => {
-      return {
-        ...state,
-        homeSelect: true,
-        portfolioSelect: false,
-        constactSelect: false,
-      };
-    },
+    toggleHomeSelect: (state) => ({
+      ...state,
+      homeSelect: true,
+      portfolioSelect: false,
+      constactSelect: false,
+    }),
 
-    togglePortfolioSelect: (state, action) => {
-      return {
-        ...state,
-        homeSelect: false,
-        portfolioSelect: true,
-        constactSelect: false,
-      };
-    },
+    togglePortfolioSelect: (state) => ({
+      ...state,
+      homeSelect: false,
+      portfolioSelect: true,
+      constactSelect: false,
+    }),
 
-
-    toggleConstactSelect: (state, action) => {
-      return {
-        ...state,
-        homeSelect: false,
-        portfolioSelect: false,
-        constactSelect: true,
-      };
-    },
+    toggleConstactSelect: (state) => ({
+      ...state,
+      homeSelect: false,
+      portfolioSelect: false,
+      constactSelect: true,
+    }),
   },
 });
 
