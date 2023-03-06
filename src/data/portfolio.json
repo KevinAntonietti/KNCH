@@ -65,7 +65,7 @@
 
 
   {
-    "id": 3,
+    "id": 6,
     "name": "Projet 3",
     "type":{
       "UI":false,
@@ -79,7 +79,7 @@
 
 
   {
-    "id": 3,
+    "id": 7,
     "name": "Projet 3",
     "type":{
       "UI":false,
@@ -91,7 +91,7 @@
     "author":"@knch"
   },
   {
-    "id": 3,
+    "id": 8,
     "name": "Projet 3",
     "type":{
       "UI":false,
@@ -103,7 +103,7 @@
     "author":"@knch"
   },
   {
-    "id": 3,
+    "id": 9,
     "name": "Projet 3",
     "type":{
       "UI":false,

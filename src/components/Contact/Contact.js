@@ -1,71 +1,79 @@
 import React from "react";
 import "./style.scss";
 
-export default function HeaderAnimation() {
+export default function Contact() {
+  
+    // Forward Animation //
+
   const elemMoveOn = (e) => {
-    // Cloud Left logic move
+
+    // Cloud Left Forward Animation
     const xCloudLeft = ((e.clientX * 20) / window.innerWidth) * -1 + "%";
     const CloudLeft = document.getElementById("Nuage_Gauche");
     CloudLeft.style.transition = "0.5s";
     CloudLeft.style.transform = `translateX(${xCloudLeft})`;
 
-    // Cloud Right Logic Move
+    // Cloud Right Forward Animation
     const xCloudRight = (e.clientX * 40) / window.innerWidth + "%";
     const CloudRight = document.getElementById("Nuage_Droite");
     CloudRight.style.transition = "0.5s";
     CloudRight.style.transform = `translateX(${xCloudRight})`;
 
-    //Sunshine logic Aniamtion
+    //Sunshine Forward Animation
     const ySun = ((e.clientY * 35) / e.screenY) * -1 + "%";
     const Sun = document.getElementById("Soleil");
     Sun.style.transition = "0.5s";
     Sun.style.transform = `translateY(${ySun})`;
     Sun.style.filter = " brightness(1.2)";
 
-    //Mountain Right logic Aniamtion
+    //Mountain Right Forward Animation
     const MountainRight = document.getElementById("Montagne_Droite");
     MountainRight.style.transition = "1s";
     MountainRight.style.filter = "brightness(1.3) ";
 
-    //Mountain Center logic Aniamtion
+    //Mountain Center Forward Animation
     const MountainCenter = document.getElementById("Montagne_Centre");
     MountainCenter.style.transition = "1s";
     MountainCenter.style.filter = "brightness(1.3)";
 
-    //Mountain Left logic Aniamtion
+    //Mountain Left Forward Animation
     const MountainLeft = document.getElementById("Montagne_Gauche");
     MountainLeft.style.transition = "1s";
     MountainLeft.style.filter = "brightness(1.3) ";
   };
+  
+  // Backward Animation //
 
   const elemMoveOut = (e) => {
-    // Cloud Left reset logic move
+
+    // Cloud Left Backward  logic move
     const CloudLeft = document.getElementById("Nuage_Gauche");
     CloudLeft.style.transition = "0.7s";
     CloudLeft.style.transform = `translateX(0%)`;
 
-    // Cloud Rightreset logic move
+    // Cloud Right Backward  logic move
     const CloudRight = document.getElementById("Nuage_Droite");
     CloudRight.style.transition = "0.7s";
     CloudRight.style.transform = `translateX(0%)`;
 
-    //Sun reset logi animation
+
+    //Sun Backward logi animation
     const Sun = document.getElementById("Soleil");
     Sun.style.transition = "0.7s";
     Sun.style.transform = `translateY(0%)`;
     Sun.style.filter = "brightness(1)";
 
-    //MountainRight reset logic animation
+    //MountainRight Backward logic animation
     const MountainRight = document.getElementById("Montagne_Droite");
     MountainRight.style.transition = "0.7s";
     MountainRight.style.filter = "brightness(1) ";
 
-    //MountainCenter reset logic animation
+    //MountainCenter Backward logic animation
     const MountainCenter = document.getElementById("Montagne_Centre");
     MountainCenter.style.transition = "0.7s";
     MountainCenter.style.filter = "brightness(1) ";
 
-    //MountainLeftreset logic animation
+    //MountainLeftreset Backward animation
     const MountainLeft = document.getElementById("Montagne_Gauche");
     MountainLeft.style.transition = "1s";
     MountainLeft.style.filter = "brightness(1) ";
@@ -73,16 +81,7 @@ export default function HeaderAnimation() {
 
   return (
     <div className="anim-box" onMouseMove={elemMoveOn} onMouseOut={elemMoveOut}>
-    <div className="letter-anim">
-      <div className="letter-anim__KNCH">
-        <p className="letter-anim__KNCH__letter">K</p>
-        <p className="letter-anim__KNCH__letter">N</p>
-        <p className="letter-anim__KNCH__letter">C</p>
-        <p className="letter-anim__KNCH__letter">H</p>
-      </div>
-    <div className="letter-anim__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam illo tempore nesciunt atque. Adipisci a laborum rem esse maiores magnam assumenda sit? Cum omnis eius quibusdam? Animi tempore in possimus quia provident similique totam perspiciatis sit harum beatae. Hic eius, repudiandae numquam assumenda impedit animi, saepe sunt aperiam ullam necessitatibus, nostrum reiciendis atque exercitationem quo earum cumque a expedita. Dicta!</div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -150 1026 530">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -170 1026 550">
         <g id="Soleil" style={{ fill: "#e5b845" }}>
           <path
             id="Soleil-2"
