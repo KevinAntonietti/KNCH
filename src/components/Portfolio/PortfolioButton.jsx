@@ -18,32 +18,32 @@ export default function PortfolioButton() {
   const CodingActive = useSelector((state) => state.portfolio.isCodingActive);
   const AllActive = useSelector((state) => state.portfolio.isAllActive);
 
-  // Filtre des éléments en UI
+  // Filtering of elements in IU
   const toggleUi = () => {
     dispatch(setResetState());
     dispatch(toggleFilterUI());
   };
 
-  // Filtre des éléments motion
+  // Filtering of motion elements
   const toggleMotion = () => {
     dispatch(setResetState());
     dispatch(toggleFilterMotion());
   };
 
-  // Filtre des éléments coding
+  // Filtering of coding elements
   const toggleCoding = () => {
     dispatch(setResetState());
     dispatch(toggleFilterCoding());
   };
 
-  // revenir au state initial
+  // return to the initial state
   const toggleALL = () => {
     dispatch(setResetState());
     dispatch(toggleFilterAll());
   };
 
+  //  search function
   const handleChange = (e) => {
-    // console.log('handleChange', e.target.value);
     dispatch(setResetState());
     dispatch(setChangeSearch(e.target.value));
     dispatch(toggleFilterSearch());
@@ -51,53 +51,57 @@ export default function PortfolioButton() {
 
   return (
     <div className="portfolio-button-menu">
-      <button
-        type="button"
-        className={
+      <div className="portfolio-button-menu__click">
+
+        <button
+          type="button"
+          className={
           AllActive
-            ? 'portfolio-button-item portfolio-button-item--active'
-            : 'portfolio-button-item '
+            ? 'portfolio-button-menu__click__item portfolio-button-menu__click__item--active'
+            : 'portfolio-button-menu__click__item '
         }
-        onClick={toggleALL}
-      >
-        All
-      </button>
-      <button
-        type="button"
-        className={
+          onClick={toggleALL}
+        >
+          All
+        </button>
+        <button
+          type="button"
+          className={
           UIActive
-            ? 'portfolio-button-item portfolio-button-item--active'
-            : 'portfolio-button-item '
+            ? 'portfolio-button-menu__click__item portfolio-button-menu__click__item--active'
+            : 'portfolio-button-menu__click__item '
         }
-        onClick={toggleUi}
-      >
-        ui
-      </button>
-      <button
-        type="button"
-        className={
+          onClick={toggleUi}
+        >
+          ui
+        </button>
+        <button
+          type="button"
+          className={
           MotionActive
-            ? 'portfolio-button-item portfolio-button-item--active'
-            : 'portfolio-button-item '
+            ? 'portfolio-button-menu__click__item portfolio-button-menu__click__item--active'
+            : 'portfolio-button-menu__click__item '
         }
-        onClick={toggleMotion}
-      >
-        motion
-      </button>
-      <button
-        type="button"
-        className={
+          onClick={toggleMotion}
+        >
+          motion
+        </button>
+        <button
+          type="button"
+          className={
           CodingActive
-            ? 'portfolio-button-item portfolio-button-item--active'
-            : 'portfolio-button-item '
+            ? 'portfolio-button-menu__click__item portfolio-button-menu__click__item--active'
+            : 'portfolio-button-menu__click__item '
         }
-        onClick={toggleCoding}
-      >
-        coding
-      </button>
+          onClick={toggleCoding}
+        >
+          coding
+        </button>
+      </div>
+
       <input
         type="search"
-        className="portfolio-button-search"
+        className="portfolio-button-menu__search"
         placeholder="Search a project..."
         onChange={handleChange}
       />
