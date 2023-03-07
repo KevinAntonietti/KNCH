@@ -127,7 +127,7 @@ export default function Menu() {
             </li>
           </Link>
 
-          {/* Portfolio Item menu - React Scroll elem */}
+          {/* Contact Item menu - React Scroll elem */}
           <Link
             activeClass="activ"
             to="Contact"
@@ -135,6 +135,7 @@ export default function Menu() {
             smooth
             duration={500}
           >
+            {/* Contact Elem elem */}
             <li
               className={
                 contactSelect ? 'menu__item menu--active' : 'menu__item'
@@ -148,6 +149,8 @@ export default function Menu() {
             </li>
           </Link>
         </ul>
+
+        {/* Burger Menu button */}
         <button type="button" className="navbar-burger" onClick={handleOpenMenu}>
           <span className="navbar-burger__burger-bar" />
         </button>

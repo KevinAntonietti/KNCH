@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 import DATA from '../data/portfolio.json';
 
@@ -7,6 +8,7 @@ const initialState = {
   isMotionActive: false,
   isCodingActive: false,
   isAllActive: true,
+  newSearch: '',
 };
 
 export const portfolioSlice = createSlice({
@@ -69,7 +71,23 @@ export const portfolioSlice = createSlice({
         isAllActive: false,
       };
     },
+
+    setChangeSearch: (state, action) => ({
+      ...state,
+      newSearch: action.payload,
+    }),
+
+    toggleFilterSearch: (state) => {
+      const filterState = state.items.filter((item) => (
+        item.name.toLowerCase().includes(state.newSearch.toLowerCase())
+      ));
+      return {
+        ...state,
+        items: filterState,
+      };
+    },
   },
+
 });
 
 export const {
@@ -78,5 +96,7 @@ export const {
   toggleFilterMotion,
   toggleFilterCoding,
   toggleFilterAll,
+  setChangeSearch,
+  toggleFilterSearch,
 } = portfolioSlice.actions;
 export default portfolioSlice.reducer;
