@@ -25,8 +25,10 @@ export default function PortfolioItem(props) {
   return (
     <a
       href={props.link}
+      target="_blank"
       ref={cardOpening}
       className={setcardOpening ? 'card--opening ' : ''}
+      rel="noreferrer"
     >
       <section className="portfolioItem" style={backgroundStyle}>
         <div className="portfolioItem__type">
