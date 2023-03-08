@@ -146,6 +146,7 @@ export default function Menu() {
             spy
             smooth
             duration={900}
+            offset={-180}
           >
             <li
               className={

@@ -83,7 +83,7 @@ export default function Contact() {
   };
 
   return (
-    <>
+    <div className="contact">
       <div ref={MountainAnim} className={setMountainAnim ? 'anim-box contact--opening' : 'anim-box'} onMouseMove={elemMoveOn} onMouseOut={elemMoveOut} onBlur={elemMoveOut}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -170 1026 550">
           <g id="Soleil" style={{ fill: '#e5b845' }}>
@@ -258,14 +258,13 @@ export default function Contact() {
           </g>
         </svg>
       </div>
-      <h1 className="contact-mail">
+      <h1 className="contact__mail">
         If you enjoyed our work,
         <br />
         please contact us.
         <br />
         knch.studio@gmail.com
-
       </h1>
-    </>
+    </div>
   );
 }

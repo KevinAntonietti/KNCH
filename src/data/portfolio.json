@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Projet 1",
+    "name": "Egalité et territoire",
     "type":{
       "UI":true,
       "coding":false,
@@ -13,33 +13,60 @@
   },
   {
     "id": 2,
-    "name": "Projet 2",
+    "name": "Forest",
     "type":{
-      "UI":true,
-      "coding":true,
+      "UI":false,
+      "coding":false,
       "motion":true
     },
-    "thumbs":"ET_UI_Thumbs.png",
+    "thumbs":"Forest_Thumbs.png",
     "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
     "author":"@knch"
   },
 
   {
     "id": 3,
-    "name": "Projet 3",
+    "name": "Gamer Helper",
     "type":{
-      "UI":false,
-      "coding":false,
+      "UI":true,
+      "coding":true,
       "motion":true
     },
-    "thumbs": "ET_UI_Thumbs.png",
+    "thumbs": "GH-UI_Thumbs_Site.png",
     "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
     "author":"@knch"
   },
 
   {
     "id": 4,
-    "name": "Projet 4",
+    "name": "No Head",
+    "type":{
+      "UI":false,
+      "coding":false,
+      "motion":true
+    },
+    "thumbs": "NoHead_Thumbs.png",
+    "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
+    "author":"@knch"
+  },
+
+  {
+    "id": 5,
+    "name": "Carto",
+    "type":{
+      "UI":false,
+      "coding":false,
+      "motion":true
+    },
+    "thumbs": "Carto-UI_Thumbs.png",
+    "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
+    "author":"@knch"
+  },
+
+
+  {
+    "id": 6,
+    "name": "PROJET",
     "type":{
       "UI":true,
       "coding":true,
@@ -50,67 +77,40 @@
     "author":"@knch"
   },
 
-  {
-    "id": 5,
-    "name": "Projet 3",
-    "type":{
-      "UI":false,
-      "coding":false,
-      "motion":true
-    },
-    "thumbs": "ET_UI_Thumbs.png",
-    "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
-    "author":"@knch"
-  },
-
-
-  {
-    "id": 6,
-    "name": "Projet 3",
-    "type":{
-      "UI":false,
-      "coding":false,
-      "motion":true
-    },
-    "thumbs": "ET_UI_Thumbs.png",
-    "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
-    "author":"@knch"
-  },
-
 
   {
     "id": 7,
-    "name": "Projet 3",
+    "name": "MAB",
     "type":{
       "UI":false,
       "coding":false,
       "motion":true
     },
-    "thumbs": "ET_UI_Thumbs.png",
+    "thumbs": "Mab_Thumbs.png",
     "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
     "author":"@knch"
   },
   {
     "id": 8,
-    "name": "Projet 3",
+    "name": "The boat",
     "type":{
       "UI":false,
       "coding":false,
       "motion":true
     },
-    "thumbs": "ET_UI_Thumbs.png",
+    "thumbs": "Boat_Thumbs.png",
     "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
     "author":"@knch"
   },
   {
     "id": 9,
-    "name": "Projet 3",
+    "name": "Lighter",
     "type":{
       "UI":false,
       "coding":false,
       "motion":true
     },
-    "thumbs": "ET_UI_Thumbs.png",
+    "thumbs": "Lighter-UI_Thumbs.png",
     "link": "https://www.behance.net/gallery/157557751/DATA-WEBSITE-Territorial-inequality-in-Lyon",
     "author":"@knch"
   }
