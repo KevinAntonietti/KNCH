@@ -24,8 +24,11 @@ export default function Menu() {
       dispatch(toggleHomeSelect());
     }
   };
-  const homeSelect = useSelector((item) => item.menu.homeSelect);
 
+  const handleScrollHomeSelect = () => {
+    dispatch(toggleHomeSelect());
+  };
+  const homeSelect = useSelector((item) => item.menu.homeSelect);
   // Portfolio toggle and state
   const handlePortfolioSelect = () => {
     if (window.innerWidth <= 650) {
@@ -34,6 +37,10 @@ export default function Menu() {
     } else {
       dispatch(togglePortfolioSelect());
     }
+  };
+
+  const handleScrollPortfolioSelect = () => {
+    dispatch(togglePortfolioSelect());
   };
   const portfolioSelect = useSelector((item) => item.menu.portfolioSelect);
 
@@ -46,7 +53,9 @@ export default function Menu() {
       dispatch(toggleConstactSelect());
     }
   };
-
+  const handleScrollContactSelect = () => {
+    dispatch(toggleConstactSelect());
+  };
   const contactSelect = useSelector((item) => item.menu.constactSelect);
 
   // State Burger Menu
@@ -63,17 +72,14 @@ export default function Menu() {
       <nav className={isOpenMenu ? 'nav show-menu' : 'nav'}>
         {/* logo Item menu - React Scroll elem */}
         <Link
-          activeClass="activ"
-          to="Menu"
-          spy
+          to="Header"
           smooth
           duration={500}
           offset={-160}
-          onSetActive={handleHomeSelect}
         >
           {/* logo elem */}
           <img
-            onClick={handleHomeSelect}
+            onClick={handleScrollHomeSelect}
             className="logo-img"
             src={LOGO}
             alt=""
@@ -81,16 +87,17 @@ export default function Menu() {
         </Link>
 
         <ul className={isOpenMenu ? 'show-menu menu' : 'menu'}>
-          {/* Home Item menu - React Scroll elem */}
+
+          {/* Home elem */}
           <Link
-            activeClass="activ"
-            to="Menu"
+            activeClass="menu__item menu--active"
+            to="Header"
+            onSetActive={handleScrollHomeSelect}
             spy
             smooth
             duration={500}
             offset={-160}
           >
-            {/* Home elem */}
             <li
               className={
                   homeSelect ? 'menu__item menu--active' : 'menu__item'
@@ -104,22 +111,23 @@ export default function Menu() {
             </li>
           </Link>
 
-          {/* Portfolio Item menu - React Scroll elem */}
+          {/* Portfolio Elem elem */}
           <Link
-            activeClass="activ"
+            activeClass="menu__item menu--active"
             to="Portfolio"
+            onSetActive={handleScrollPortfolioSelect}
             spy
             smooth
             duration={500}
             offset={-160}
           >
-            {/* Portfolio Elem elem */}
             <li
               className={
                   portfolioSelect ? 'menu__item menu--active' : 'menu__item'
                 }
               onClick={handlePortfolioSelect}
             >
+
               <p className="menu__item__number">02.</p>
               <p>
                 {portfolioSelect ? '<portfolio />' : '<portfolio>'}
@@ -127,15 +135,15 @@ export default function Menu() {
             </li>
           </Link>
 
-          {/* Contact Item menu - React Scroll elem */}
+          {/* Contact Elem elem */}
           <Link
-            activeClass="activ"
+            activeClass="menu__item menu--active"
+            onSetActive={handleScrollContactSelect}
             to="Contact"
             spy
             smooth
-            duration={500}
+            duration={900}
           >
-            {/* Contact Elem elem */}
             <li
               className={
                 contactSelect ? 'menu__item menu--active' : 'menu__item'

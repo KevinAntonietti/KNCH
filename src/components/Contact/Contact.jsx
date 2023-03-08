@@ -259,7 +259,10 @@ export default function Contact() {
         </svg>
       </div>
       <h1 className="contact-mail">
-
+        If you enjoyed our work,
+        <br />
+        please contact us.
+        <br />
         knch.studio@gmail.com
 
       </h1>
