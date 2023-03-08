@@ -90,6 +90,7 @@ export default function Menu() {
 
           {/* Home elem */}
           <Link
+            className="menu__item "
             activeClass="menu__item menu--active"
             to="Header"
             onSetActive={handleScrollHomeSelect}
@@ -113,6 +114,7 @@ export default function Menu() {
 
           {/* Portfolio Elem elem */}
           <Link
+            className="menu__item "
             activeClass="menu__item menu--active"
             to="Portfolio"
             onSetActive={handleScrollPortfolioSelect}
@@ -137,6 +139,7 @@ export default function Menu() {
 
           {/* Contact Elem elem */}
           <Link
+            className="menu__item "
             activeClass="menu__item menu--active"
             onSetActive={handleScrollContactSelect}
             to="Contact"
