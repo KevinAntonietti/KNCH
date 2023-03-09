@@ -57,5 +57,5 @@ To deploy this project run
 
 ## Authors
 
-- [@octokatherine](https://www.github.com/octokatherine)
+- [@KevinAntonietti](https://github.com/KevinAntonietti)
 
